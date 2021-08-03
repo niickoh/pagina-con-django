@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>INICIO DE SESION</title> 
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+	{% load static %}
+	<link rel="stylesheet" href="{% static 'petSalud/css/estilos.css'%}" media ="all">	
+	
+
+</head>  
+<body background="{% static 'petSalud/img/img_petSalud.jpg'%}">
+    <div class="contenedor">
+        <div class="input-contenedor"></div>
+            <form action="" method="POST" class="formulario">
+
+                {% csrf_token %}
+                
+                {{form}}
+                <input type="submit" value="EDITAR" class="button">
+         
+         
+         
+
+     
+
+            <center><A href="/listar/">Ver Productos</A></center> 
+            <center><A href="/">Volver</A></center> 
+            </form>
+            
+        </div>
+    </div>
+</body>
+</html>

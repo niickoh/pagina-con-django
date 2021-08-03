@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Eliminar Producto</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% load static %}
+		<link rel="stylesheet" href="{% static 'petSalud/css/estilos.css'%}" media ="all">
+    </head>
+    <body background="{% static 'petSalud/img/img_petSalud.jpg'%}">
+	<center>
+      <form class="formulario">
+		<h1> <i>  <center> PetSalud </i> </h1>
+		<h2>  <center> Articulos para Mascotas </h2>
+		<br>
+		<h1>Eliminar Producto</h1>
+            <div class="contenedor">
+                
+                <div class="input-contenedor">
+                    <input type="text" placeholder="Código"/>
+                </div>
+                                
+                <input type="submit" value="Eliminar Producto" class="button">
+                
+            </div>
+            <center><A href="/menu_gestion/">Volver</A></center> 
+      </form>
+           
+        
+    </body>
+</html>

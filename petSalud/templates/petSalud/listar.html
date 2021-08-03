@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>INICIO DE SESION</title> 
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+	{% load static %}
+	<link rel="stylesheet" href="{% static 'petSalud/css/estilos.css'%}" media ="all">	
+	
+
+</head>  
+<body background="{% static 'petSalud/img/img_petSalud.jpg'%}">
+    <div class="formulario">
+        <table>
+            <tr>
+                <th>Codigo</th>
+                <th>Descripcion</th>
+                <th>Cantidad</th>
+                <th>Precio</th>
+                
+            </tr>
+            
+            {% for p in productos %}
+
+            <tr>
+                <td>{{ p.codigo | title }}</td>
+                <td>{{ p.descripcion | title }}</td>
+                <td>{{ p.cantidad  }}</td>
+                <td>{{ p.precio  }}</td>
+                <td>
+                    <a href="{% url 'modificar_producto' p.id %}">editar</a>
+                </td>
+                <td>
+                    <a href="{% url 'eliminar_producto' p.id %}">eliminar</a>
+                </td>
+            </tr>
+            {% endfor %}
+
+            
+       
+
+        </table>
+    </div>    
+    <center><A href="/">Volver</A></center> 
+</html>

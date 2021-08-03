@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>REGISTRO</title> 
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+	{% load static %}
+	<link rel="stylesheet" href="{% static 'petSalud/css/estilos.css'%}" media ="all">	
+	
+
+</head>  
+<body background="{% static 'petSalud/img/img_petSalud.jpg'%}">
+    <form action="" method="POST" class="formulario">
+
+        {% csrf_token %}
+
+        {{ form }}
+        <hr>
+
+        <input type="submit" value="Registrate" class="button">
+         
+         
+         
+
+     
+
+     <center><A href="/">Volver</A></center> 
+    </form>
+    
+</body>
+</html>
